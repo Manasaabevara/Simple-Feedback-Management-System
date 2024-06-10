@@ -11,13 +11,13 @@
    
 2. Install dependencies:
 
-```bash
-npm install
+   ```bash
+   npm install
 
 3. Start the server:
 
-```bash
-npm run dev
+   ```bash
+   npm run dev
 
 ### Frontend
 1. Navigate to the frontend directory:
