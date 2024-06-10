@@ -11,7 +11,7 @@
    
 2. Install dependencies:
 
-bash
+```bash
 npm install
 
 3. Start the server:
