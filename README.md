@@ -1,8 +1,7 @@
---markdown--
+```markdown
 # Simple Feedback Management System
 
 ## Project Setup
-
 ### Backend
 
 1. Navigate to the backend directory:
@@ -47,13 +46,13 @@ Feedback entries are stored in an in-memory data structure (array).
 No external in-memory storage solutions are used.
 
 
---sql--
-### Additional Notes
+   ```sql
+   ### Additional Notes
 
-- The optional rate limit and infinite scrolling features can be added as enhancements.
-- Ensure your backend and frontend servers are running simultaneously for full functionality.
+   - The optional rate limit and infinite scrolling features can be added as enhancements.
+   - Ensure your backend and frontend servers are running simultaneously for full functionality.
 
-With these steps, you should have a fully functioning Simple Feedback Management System.
+   With these steps, you should have a fully functioning Simple Feedback Management System.
 
 
 
