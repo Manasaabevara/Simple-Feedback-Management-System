@@ -22,14 +22,18 @@ This project is a simple feedback management system that allows users to submit 
    npm run dev
 ### Logic and Approach
 Express Server: An Express server is set up in src/index.ts to handle incoming requests.
+
 TypeScript: TypeScript is used for type safety and better development experience.
+
 In-Memory Storage: Feedback entries are stored in an in-memory array to keep the implementation simple.
+
 Controllers and Routes: The project uses a clear separation of concerns with controllers handling the logic and routes defining the API endpoints:
-GET /feedback: Retrieves all feedback entries.
-POST /feedback: Submits new feedback.
+   GET /feedback: Retrieves all feedback entries.
+   POST /feedback: Submits new feedback.
 
 ### FeedbackController (src/controllers/feedbackController.ts)
 getAllFeedback: Retrieves all feedback entries from the in-memory array.
+
 submitFeedback: Adds a new feedback entry to the in-memory array.
 
 ### Frontend
