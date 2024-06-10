@@ -82,6 +82,10 @@ Endpoints:
 GET /feedback: Retrieve all feedback entries
 POST /feedback: Submit new feedback
 
+### Conclusion
+This project provides a simple yet effective feedback management system with a clear separation of concerns between the backend and frontend, ensuring maintainability and scalability.
+
+
 ### Notes
 Feedback entries are stored in an in-memory data structure (array).
 No external in-memory storage solutions are used.
@@ -94,3 +98,4 @@ No external in-memory storage solutions are used.
    - Ensure your backend and frontend servers are running simultaneously for full functionality.
 
    With these steps, you should have a fully functioning Simple Feedback Management System.
+
