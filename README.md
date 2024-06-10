@@ -28,7 +28,9 @@ TypeScript: TypeScript is used for type safety and better development experience
 In-Memory Storage: Feedback entries are stored in an in-memory array to keep the implementation simple.
 
 Controllers and Routes: The project uses a clear separation of concerns with controllers handling the logic and routes defining the API endpoints:
+
    GET /feedback: Retrieves all feedback entries.
+   
    POST /feedback: Submits new feedback.
 
 ### FeedbackController (src/controllers/feedbackController.ts)
@@ -51,6 +53,27 @@ submitFeedback: Adds a new feedback entry to the in-memory array.
 
    ```bash
    npm start
+
+### Logic and Approach
+React Application: A React application is set up to provide a user interface for submitting and viewing feedback.
+
+TypeScript: TypeScript is used for type safety and better development experience.
+
+Axios: Axios is used to handle API requests to the backend.
+
+Components:
+   
+   FeedbackForm: A form component to submit new feedback.
+   
+   FeedbackList: A component to display all feedback entries.
+
+### FeedbackForm Component (src/components/FeedbackForm.tsx)
+
+Handles form submission and sends a POST request to the backend to submit feedback.
+
+### FeedbackList Component (src/components/FeedbackList.tsx)
+
+Fetches and displays all feedback entries by sending a GET request to the backend.
 
 ### Project Structure
 Backend: Node.js with Express and TypeScript
