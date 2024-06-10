@@ -4,29 +4,6 @@
 # Overview
 This project is a simple feedback management system that allows users to submit feedback and view all feedback entries. The system consists of a backend built with Node.js, Express, and TypeScript, and a frontend built with React and TypeScript.
 
-# Project Structure
-   ```css
-   Simple-Feedback-Management-System/
-   ├── backend/
-   │   ├── src/
-   │   │   ├── controllers/
-   │   │   │   └── feedbackController.ts
-   │   │   ├── routes/
-   │   │   │   └── feedbackRoutes.ts
-   │   │   └── index.ts
-   │   ├── package.json
-   │   └── tsconfig.json
-   ├── frontend/
-   │   ├── src/
-   │   │   ├── components/
-   │   │   │   ├── FeedbackForm.tsx
-   │   │   │   └── FeedbackList.tsx
-   │   │   └── App.tsx
-   │   ├── package.json
-   │   └── tsconfig.json
-   ├── README.md
-   └── .gitignore
-
 ## Project Setup
 ### Backend
 
@@ -91,6 +68,26 @@ No external in-memory storage solutions are used.
 
    With these steps, you should have a fully functioning Simple Feedback Management System.
 
-
-
+## Project Structure
+   ```css
+   Simple-Feedback-Management-System/
+   ├── backend/
+   │   ├── src/
+   │   │   ├── controllers/
+   │   │   │   └── feedbackController.ts
+   │   │   ├── routes/
+   │   │   │   └── feedbackRoutes.ts
+   │   │   └── index.ts
+   │   ├── package.json
+   │   └── tsconfig.json
+   ├── frontend/
+   │   ├── src/
+   │   │   ├── components/
+   │   │   │   ├── FeedbackForm.tsx
+   │   │   │   └── FeedbackList.tsx
+   │   │   └── App.tsx
+   │   ├── package.json
+   │   └── tsconfig.json
+   ├── README.md
+   └── .gitignore
 
