@@ -22,18 +22,18 @@
 ### Frontend
 1. Navigate to the frontend directory:
 
-```bash
-cd client
+   ```bash
+   cd client
 
 2. Install dependencies:
 
-```bash
-npm install
+   ```bash
+   npm install
 
 3. Start the React app:
 
-```bash
-npm start
+   ```bash
+   npm start
 
 ### Project Structure
 Backend: Node.js with Express and TypeScript
