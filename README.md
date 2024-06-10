@@ -16,23 +16,23 @@ npm install
 
 3. Start the server:
 
-bash
+```bash
 npm run dev
 
 ### Frontend
 1. Navigate to the frontend directory:
 
---bash--
+```bash
 cd client
 
 2. Install dependencies:
 
-bash
+```bash
 npm install
 
 3. Start the React app:
 
-bash
+```bash
 npm start
 
 ### Project Structure
