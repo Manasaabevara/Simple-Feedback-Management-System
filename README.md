@@ -67,27 +67,3 @@ No external in-memory storage solutions are used.
    - Ensure your backend and frontend servers are running simultaneously for full functionality.
 
    With these steps, you should have a fully functioning Simple Feedback Management System.
-
-## Project Structure
-   ```css
-   Simple-Feedback-Management-System/
-   ├── backend/
-   │   ├── src/
-   │   │   ├── controllers/
-   │   │   │   └── feedbackController.ts
-   │   │   ├── routes/
-   │   │   │   └── feedbackRoutes.ts
-   │   │   └── index.ts
-   │   ├── package.json
-   │   └── tsconfig.json
-   ├── frontend/
-   │   ├── src/
-   │   │   ├── components/
-   │   │   │   ├── FeedbackForm.tsx
-   │   │   │   └── FeedbackList.tsx
-   │   │   └── App.tsx
-   │   ├── package.json
-   │   └── tsconfig.json
-   ├── README.md
-   └── .gitignore
-
