@@ -5,14 +5,14 @@ Step-by-Step Instructions:
 
 1. Initialize React App:
 
---bash--
-npx create-react-app client --template typescript
-cd client
+  ```bash
+  npx create-react-app client --template typescript
+  cd client
 
 2. Install Axios:
 
---bash--
-npm install axios
+  ```bash
+  npm install axios
 
 3. Setup Project Structure:
 
@@ -21,98 +21,98 @@ Create src/components and src/services directories.
 4. Create FeedbackForm Component:
 
 Create src/components/FeedbackForm.tsx:
---tsx--
-import React, { useState } from 'react';
-import axios from 'axios';
+  ```tsx
+  import React, { useState } from 'react';
+  import axios from 'axios';
 
-const FeedbackForm: React.FC = () => {
-  const [name, setName] = useState('');
-  const [feedback, setFeedback] = useState('');
+  const FeedbackForm: React.FC = () => {
+    const [name, setName] = useState('');
+    const [feedback, setFeedback] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await axios.post('http://localhost:3000/feedback', { name, feedback });
-    setName('');
-    setFeedback('');
+    const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      await axios.post('http://localhost:3000/feedback', { name, feedback });
+      setName('');
+      setFeedback('');
+    };
+
+    return (
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Name:</label>
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+        </div>
+        <div>
+          <label>Feedback:</label>
+          <textarea value={feedback} onChange={(e) => setFeedback(e.target.value)} required />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    );
   };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Name:</label>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-      </div>
-      <div>
-        <label>Feedback:</label>
-        <textarea value={feedback} onChange={(e) => setFeedback(e.target.value)} required />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-  );
-};
-
-export default FeedbackForm;
+  export default FeedbackForm;
 
 5. Create FeedbackList Component:
 
 Create src/components/FeedbackList.tsx:
---tsx--
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+  ```tsx
+  import React, { useEffect, useState } from 'react';
+  import axios from 'axios';
 
-interface Feedback {
-  name: string;
-  feedback: string;
-}
+  interface Feedback {
+    name: string;
+    feedback: string;
+  }
 
-const FeedbackList: React.FC = () => {
-  const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
+  const FeedbackList: React.FC = () => {
+    const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
 
-  useEffect(() => {
-    const fetchFeedbacks = async () => {
-      const response = await axios.get('http://localhost:3000/feedback');
-      setFeedbacks(response.data);
-    };
-    fetchFeedbacks();
-  }, []);
+    useEffect(() => {
+      const fetchFeedbacks = async () => {
+        const response = await axios.get('http://localhost:3000/feedback');
+        setFeedbacks(response.data);
+      };
+      fetchFeedbacks();
+    }, []);
 
-  return (
-    <div>
-      <h2>All Feedbacks</h2>
-      <ul>
-        {feedbacks.map((fb, index) => (
-          <li key={index}>
-            <strong>{fb.name}</strong>: {fb.feedback}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+    return (
+      <div>
+        <h2>All Feedbacks</h2>
+        <ul>
+          {feedbacks.map((fb, index) => (
+            <li key={index}>
+              <strong>{fb.name}</strong>: {fb.feedback}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
 
-export default FeedbackList;
+  export default FeedbackList;
 
 6. Setup App Component:
 
 Update src/App.tsx:
---tsx--
-import React from 'react';
-import FeedbackForm from './components/FeedbackForm';
-import FeedbackList from './components/FeedbackList';
+  ```tsx
+  import React from 'react';
+  import FeedbackForm from './components/FeedbackForm';
+  import FeedbackList from './components/FeedbackList';
 
-const App: React.FC = () => {
-  return (
-    <div>
-      <h1>Feedback Management System</h1>
-      <FeedbackForm />
-      <FeedbackList />
-    </div>
-  );
-};
+  const App: React.FC = () => {
+    return (
+      <div>
+        <h1>Feedback Management System</h1>
+        <FeedbackForm />
+        <FeedbackList />
+      </div>
+    );
+  };
 
-export default App;
+  export default App;
 
 7. Start the React App:
 
---bash--
-npm start
+  ```bash
+  npm start
